@@ -4,6 +4,13 @@
 It is focused on providing clear data structures and binary parsing helpers for core
 filesystem metadata, starting with the EROFS superblock.
 
+## Current Features
+
+- Parses EROFS superblock magic number
+- Calculates block size from `BlockSizeBits`
+- Displays total blocks, inodes, volume name and UUID
+- Cross-platform: works on Windows, Linux, macOS
+
 ## Installation
 
 ```bash
@@ -36,6 +43,26 @@ func main() {
 	fmt.Printf("Blocks: %d\n", sb.Blocks)
 }
 ```
+
+## Demo Output
+
+Example from running the `cmd/erofs-go` CLI against an image:
+
+```
+Magic:        0xE0F5E1E2
+Block size:   4096 bytes
+Total blocks: 3276800
+Total inodes: 28147497671065600
+Volume name:  
+UUID:         00000000-0000-0000-0000-000000000000
+```
+
+## Roadmap
+
+- Image injection for fuzz testing
+- Inode table parser
+- Directory entry walker
+- GitHub Actions CI integration
 
 ## GSoC 2026 Alignment
 
