@@ -64,7 +64,3 @@ UUID:         00000000-0000-0000-0000-000000000000
 - Directory entry walker
 - GitHub Actions CI integration
 
-## GSoC 2026 Alignment
-
-This library is being developed to support the goals of the **GSoC 2026 EROFS project**,
-including better tooling for reading, inspecting, and building EROFS filesystem images in Go.
